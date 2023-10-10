@@ -220,6 +220,7 @@
         tr1.appendChild(th2);
         tr1.appendChild(th3);
         tr1.appendChild(th4);
+        for (let i = 0; i < 5; i++) {
         const tr2 = document.createElement("tr");
         const td1 = document.createElement("td");
         const img1 = document.createElement("img");
@@ -237,6 +238,8 @@
         tr2.appendChild(td2);
         tr2.appendChild(td3);
         tr2.appendChild(td4);
+          
+        }
 
         console.log(table);
         newElementTable.appendChild(table);
@@ -278,7 +281,6 @@
           const element = remuveImg[i];
           element.remove();
         }
-        console.log(element);
       };
       hideAllImages();
 

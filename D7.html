@@ -182,6 +182,8 @@
          */
 
       const makeItClickable = function () {
+        let h1 = document.querySelector("h1");
+        h1.innerText = h1.innerText.slice(0, -1);
         console.log(myTitle);
       };
       myTitle.onclick = makeItClickable;
@@ -220,10 +222,17 @@
         tr1.appendChild(th4);
         const tr2 = document.createElement("tr");
         const td1 = document.createElement("td");
+        const img1 = document.createElement("img");
+        img1.src =
+          "https://plus.unsplash.com/premium_photo-1664303847960-586318f59035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80";
         const td2 = document.createElement("td");
+        td2.innerText = "auto";
         const td3 = document.createElement("td");
+        td3.innerText = "100";
         const td4 = document.createElement("td");
+        td4.innerText = "30€/pezzo";
         table.appendChild(tr2);
+        td1.appendChild(img1);
         tr2.appendChild(td1);
         tr2.appendChild(td2);
         tr2.appendChild(td3);
@@ -238,13 +247,40 @@
           Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
        */
 
-      const addRow = function () {};
+      const addRow = function () {
+        const addRowTable = document.querySelector("table");
+        const tr2 = document.createElement("tr");
+        const td1 = document.createElement("td");
+        const img2 = document.createElement("img");
+        img2.src =
+          "https://plus.unsplash.com/premium_photo-1664303847960-586318f59035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80";
+        const td2 = document.createElement("td");
+        td2.innerText = "bici";
+        const td3 = document.createElement("td");
+        td3.innerText = "3300";
+        const td4 = document.createElement("td");
+        td4.innerText = "15€/pezzo";
+        addRowTable.appendChild(tr2);
+        td1.appendChild(img2);
+        tr2.appendChild(td1);
+        tr2.appendChild(td2);
+        tr2.appendChild(td3);
+        tr2.appendChild(td4);
+      };
+      addRow();
 
       /* ESERCIZIO 14
          Crea una funzione che nasconda le immagini della tabella quando eseguita
        */
-
-      const hideAllImages = function () {};
+      const hideAllImages = function () {
+        const remuveImg = document.querySelectorAll("table tr td img");
+        for (let i = 0; i < remuveImg.length; i++) {
+          const element = remuveImg[i];
+          element.remove();
+        }
+        console.log(element);
+      };
+      hideAllImages();
 
       /* EXTRA ESERCIZIO 15
          Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
